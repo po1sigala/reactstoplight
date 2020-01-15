@@ -10,8 +10,8 @@ class App extends Component {
                     subheader="below is an intesection controlled by two stoplights"
                     title="StopLight Simulator"
                 />
-                <Stoplight id="NS" />
-                <Stoplight id="EW" />
+                <Stoplight id="NS" red="On" green="Off" />
+                <Stoplight id="EW" red="Off" green="On" />
             </div>
         );
     }

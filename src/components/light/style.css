@@ -1,0 +1,19 @@
+/* for individual light */
+#redLightOff {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+#yellowLightOff {
+    background-color: rgba(255, 251, 0, 0.1);
+}
+#greenLightOff {
+    background-color: rgba(51, 255, 0, 0.1);
+}
+#redLightOn {
+    background-color: rgb(255, 0, 0);
+}
+#YellowLightOn {
+    background-color: rgb(255, 251, 0);
+}
+#greenLightOn {
+    background-color: rgb(51, 255, 0);
+}

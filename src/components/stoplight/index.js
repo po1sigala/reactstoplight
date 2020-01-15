@@ -6,9 +6,9 @@ class Stoplight extends Component {
         return (
             <div className="stopGroup">
                 <div className="stoplight">
-                    <Light id="redLight" />
-                    <Light id="yellowLight" />
-                    <Light id="greenLight" />
+                    <Light id="redLight" onOrOff={this.props.red} />
+                    <Light id="yellowLight" onOrOff="Off" />
+                    <Light id="greenLight" onOrOff={this.props.green} />
                 </div>
             </div>
         );
