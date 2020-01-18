@@ -11,18 +11,19 @@ class Stoplight extends Component {
     };
     componentDidMount() {
         setInterval(() => {
-            console.log(`litlight is ${this.state.litLight}`);
+            console.log(`litlight is ${this.state.litLight[0]}`);
             switch (this.state.litLight[0]) {
                 case "red":
                     //wait an interval so the yellow light can catch up
-                    setTimeout(() => {
-                        //turn red off
-                        this.setState({ red: "0.1" });
-                        //turn green on
-                        this.setState({ green: "1.0" });
-                        this.setState({ litLight: ["green"] });
-                    }, this.state.interval);
+                    this.setState({ litLight: ["pause"] });
 
+                    break;
+                case "pause":
+                    console.log("changing to green");
+                    this.setState({ red: "0.1" });
+                    //turn green on
+                    this.setState({ green: "1.0" });
+                    this.setState({ litLight: ["green"] });
                     break;
                 case "yellow":
                     this.setState({ yellow: "0.1" });
@@ -30,11 +31,9 @@ class Stoplight extends Component {
                     this.setState({ litLight: ["red"] });
                     break;
                 case "green":
-                    console.log("green");
                     this.setState({ green: "0.1" });
-                    console.log("green off");
+
                     this.setState({ yellow: "1.0" });
-                    console.log("yellow on");
                     this.setState({ litLight: ["yellow"] });
                     break;
             }

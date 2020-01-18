@@ -11,6 +11,7 @@ class App extends Component {
                     title="StopLight Simulator"
                 />
                 <Stoplight id="NS" red="1" green="0.1" onLight="red" />
+                <Stoplight id="EW" red="0.1" green="1" onLight="green" />
             </div>
         );
     }
