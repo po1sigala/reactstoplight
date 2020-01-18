@@ -7,7 +7,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Jumbotron
-                    subheader="below is an intesection controlled by two stoplights"
+                    subheader="below is an intesection controlled by two stoplights on a 3 second interval"
                     title="StopLight Simulator"
                 />
                 <Stoplight id="NS" red="1" green="0.1" onLight="red" />
