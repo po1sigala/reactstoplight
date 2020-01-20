@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Jumbotron from "./components/jumbotron";
 import Stoplight from "./components/stoplight";
+import Button from "./components/Button";
 class App extends Component {
     render() {
         return (
@@ -12,6 +13,7 @@ class App extends Component {
                 />
                 <Stoplight id="NS" red="1" green="0.1" onLight="red" />
                 <Stoplight id="EW" red="0.1" green="1" onLight="green" />
+                <Button className="lightswitch" />
             </div>
         );
     }

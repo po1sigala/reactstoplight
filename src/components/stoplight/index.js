@@ -11,7 +11,6 @@ class Stoplight extends Component {
     };
     componentDidMount() {
         setInterval(() => {
-            console.log(`litlight is ${this.state.litLight[0]}`);
             switch (this.state.litLight[0]) {
                 case "red":
                     //wait an interval so the yellow light can catch up
@@ -19,7 +18,6 @@ class Stoplight extends Component {
 
                     break;
                 case "pause":
-                    console.log("changing to green");
                     this.setState({ red: "0.1" });
                     //turn green on
                     this.setState({ green: "1.0" });
