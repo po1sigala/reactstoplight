@@ -34,6 +34,10 @@ class Stoplight extends Component {
                     this.setState({ yellow: "1.0" });
                     this.setState({ litLight: ["yellow"] });
                     break;
+                default:
+                    console.log(
+                        `we got a case otehr than red yellow pause or green instead we got ${this.state.litLight[0]}`
+                    );
             }
         }, this.state.interval);
     }
